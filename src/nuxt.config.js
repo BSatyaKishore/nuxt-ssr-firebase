@@ -11,12 +11,26 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Roboto',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdn.muicss.com/mui-0.9.35/css/mui.min.css',
+      },
     ],
   },
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  css: [
+    {
+      src: '@/assets/styles/main.css',
+      lang: 'css',
+    },
+  ],
   /*
   ** Build configuration
   */
@@ -45,6 +59,9 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/,
+          options: {
+            fix: true,
+          },
         });
       }
     },

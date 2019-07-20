@@ -1,8 +1,7 @@
 <template>
   <section class="container">
     <div>
-      <logo/>
-      <h1 class="mui--text-display1">Nuxt.js Firebase Functions</h1>
+      <h1 class="mui--text-display1">Page 3</h1>
       <h2 class="headline">Rendered From:<span class="render-result">{{renderSource}}</span></h2>
       <button
         id="reload-btn"
@@ -15,17 +14,12 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo';
-
 export default {
-  asyncData() {
+  async asyncData() {
     return {
       // eslint-disable-next-line
-      renderSource: process.static ? 'static' : (process.server ? 'server' : 'client'),
+      renderSource: process.static ? 'static' : (process.server ? 'server' : 'client')
     };
-  },
-  components: {
-    Logo,
   },
   methods: {
     reloadPage() {
